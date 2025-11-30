@@ -1,6 +1,6 @@
 # Workout Tracker - Custom Authentication Learning Project
 
-A full-stack workout tracking application built with Next.js 16, featuring a **custom authentication system** implemented from scratch. This project was created to learn and understand the fundamentals of building secure authentication without relying on third-party auth providers.
+A full-stack workout tracking application built with Next.js 16, featuring a **custom authentication system** implemented from scratch. This project was created to learn and understand the fundamentals of building secure authentication without relying on third-party auth providers. Everything was vibe coded except the auth bit! 😃
 
 ## 🎯 Project Purpose
 
