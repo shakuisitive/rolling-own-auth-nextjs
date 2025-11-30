@@ -1,9 +1,3 @@
-// import { getUserWorkouts } from "../actions/workouts";
-// import WorkoutForm from "../components/WorkoutForm";
-// import WorkoutList from "../components/WorkoutList";
-// import { logout } from "../utils/session";
-
-import { logout } from "../features/auth/utils/session";
 import { getUserWorkouts } from "../features/workouts/action/workoutsAction";
 import { WorkoutForm } from "../features/workouts/components/workout-form";
 import { WorkoutList } from "../features/workouts/components/workout-list";
@@ -11,30 +5,15 @@ import { WorkoutList } from "../features/workouts/components/workout-list";
 export default async function WorkoutsPage() {
   const workouts = await getUserWorkouts();
 
-  const handleLogout = async () => {
-    "use server";
-    await logout();
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Workout Tracker
-            </h1>
-            <p className="text-gray-600 mt-2">Track your fitness journey</p>
-          </div>
-          <form action={handleLogout}>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
-            >
-              Logout
-            </button>
-          </form>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">
+            Workout Tracker
+          </h1>
+          <p className="text-gray-600 mt-2">Track your fitness journey</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
